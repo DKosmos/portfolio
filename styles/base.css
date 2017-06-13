@@ -59,3 +59,7 @@ body {
 p {
 	font-size: 1em;
 }
+
+.floatclear {
+	clear: both;
+}
