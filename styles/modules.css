@@ -8,6 +8,11 @@
   padding: .3em;
 }
 
+.portfolioitem h3 {
+  font-size: 1.5em;
+  padding: .3em;
+}
+
 .portfolioitem p {
   padding: .3em;
   font-size: 1em;
