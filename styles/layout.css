@@ -30,7 +30,7 @@ body {
     display: inline-block;
     float: left;
     font-size: 2em;
-    background: blue;
+    background: #0165a0;
     color: white;
     padding: .2em;
     margin: 5px 10px;
@@ -42,6 +42,7 @@ body {
     margin: 0 auto;
     width: 476.4px;
     height: 54.8px;
+    background: #014c83;
   }
 
   header div {

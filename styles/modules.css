@@ -1,0 +1,14 @@
+.portfolioitem img {
+  float: left;
+  margin: 5px;
+}
+
+.portfolioitem h2 {
+  font-size: 2em;
+  padding: .3em;
+}
+
+.portfolioitem p {
+  padding: .3em;
+  font-size: 1em;
+}
