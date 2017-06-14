@@ -86,6 +86,7 @@ body {
     margin: 0 auto;
     width: 476.4px;
     height: 20px;
+    border-radius: 10px;
     background: radial-gradient(white, #46bfea, #0165a0, #014c83);
   }
 
