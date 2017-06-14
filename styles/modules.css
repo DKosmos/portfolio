@@ -17,3 +17,12 @@
   padding: .3em;
   font-size: 1em;
 }
+
+.template {
+  display: none;
+}
+
+.portfolioitem img {
+  max-width: 200px;
+  max-height: 200px;
+}
