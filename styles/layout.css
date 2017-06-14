@@ -11,6 +11,18 @@ header {
   background: linear-gradient(to right, #014c83, #0165a0, #46bfea, white, #46bfea, #0165a0, #014c83);
 }
 
+.sociallinks {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.sociallinks span {
+  float: left;
+  padding: 10px;
+  font-size: 1.25em;
+}
+
 .hidden {
   display: none;
 }
