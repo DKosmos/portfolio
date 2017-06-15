@@ -17,7 +17,4 @@ portfolioView.handleMainNav = function() {
 
 $(document).ready(function(){
   portfolioView.handleMainNav();
-  $('.content').each(function(){
-    $(this).hide();
-  });
 })
