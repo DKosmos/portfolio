@@ -64,6 +64,15 @@ p {
 	clear: both;
 }
 
+.tab:hover {
+	text-decoration: none;
+	background: #46bfea;
+}
+
+.content {
+	display: none;
+}
+
 /* darkest blue: #014c83
 middle blue: #0165a0
 light blue: #46bfea */

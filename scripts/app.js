@@ -30,7 +30,7 @@ portfolioData.forEach(function(itemObj) {
 });
 
 items.forEach(function(item) {
-  $('main').append(item.toHtml());
+  $('.portfolio').append(item.toHtml());
 })
 
 $('div.icon-menu').on('click', function(){
