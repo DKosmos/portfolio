@@ -11,18 +11,9 @@ function PortfolioItem(portfolioDataObj){
 }
 
 PortfolioItem.prototype.toHtml = function() {
-  var $newItem = $('article.template').clone();
-  $newItem.removeClass('template');
-  $newItem.data('category', this.title);
-
-  $newItem.find('.portfolioitem h2').html(this.name);
-  $newItem.find('.portfolioitem a').html(this.url);
-  $newItem.find('.portfolioitem a').attr('href', this.url);
-  $newItem.find('.portfolioitem img').attr('src', this.img);
-  $newItem.find('.portfolioitem p').html(this.description);
-
-  $newItem.append('<hr>');
-  return $newItem;
+  var template = $('#portfolio-template').html();
+  var renderTemplate = Handlebars.compile(template);
+  return renderTemplate(this);
 }
 
 portfolioData.forEach(function(itemObj) {
