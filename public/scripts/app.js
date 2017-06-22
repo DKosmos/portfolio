@@ -15,6 +15,7 @@ PortfolioItem.prototype.toHtml = function() {
   var renderTemplate = Handlebars.compile(template);
   return renderTemplate(this);
 }
+
 PortfolioItem.loadAll = function(rawData){
   rawData.forEach(function(itemObj) {
     PortfolioItem.all.push(new PortfolioItem(itemObj));
