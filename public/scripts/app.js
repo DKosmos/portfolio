@@ -29,7 +29,7 @@ PortfolioItem.fetchAll = function() {
   if(localStorage.rawData){
     PortfolioItem.loadAll(JSON.parse(localStorage.rawData));
   } else {
-    $.getJSON('../scripts/portfolioitems.json').then(function(data){
+    $.getJSON('./scripts/portfolioitems.json').then(function(data){
       localStorage.rawData = JSON.stringify(data);
       PortfolioItem.loadAll(data);
     })

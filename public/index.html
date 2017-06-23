@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules.css">
+
     <script id="portfolio-template" type="text/x-handlebars-template">
       <article>
         <div class="floatclear"></div>
@@ -16,9 +17,10 @@
           <h3><a href="{{url}}">{{url}}</a></h3>
           {{{description}}}
         </section>
-    </article>
+      </article>
     </script>
   </head>
+
   <body>
     <header>
       <div class="sociallinks">
@@ -39,16 +41,21 @@
       <div class="icon-menu"><div>
     </header>
     <div class="floatclear"></div>
+
     <main>
       <section class="home content">
         <p>Home Page</p>
       </section>
+
       <section class="about content">
         <p>About Page</p>
       </section>
-      <section class="portfolio content">
-      </section>
+
+      <section class="portfolio content"></section>
     </main>
+
+    <footer><img src="imgs/KosmosCircleLogoTransp.png"></footer>
+
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
     <script src="scripts/portfolioItems.json"></script>
@@ -57,6 +64,5 @@
     <script>
       PortfolioItem.fetchAll();
     </script>
-    <footer><img src="imgs/KosmosCircleLogoTransp.png"></footer>
   </body>
 </html>
