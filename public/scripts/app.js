@@ -5,11 +5,7 @@ var app = app || {};
 (function(module) {
 
   function PortfolioItem(portfolioDataObj){
-    this.name = portfolioDataObj.name;
-    this.url = portfolioDataObj.url;
-    this.img = portfolioDataObj.img;
-    this.title = portfolioDataObj.title;
-    this.description = portfolioDataObj.description;
+    Object.keys(portfolioDataObj).forEach(key => this[key] = portfolioDataObj[key]);
   }
 
   PortfolioItem.all = [];
@@ -21,19 +17,15 @@ var app = app || {};
   }
 
   PortfolioItem.loadAll = function(rawData){
-    rawData.forEach(function(itemObj) {
-      PortfolioItem.all.push(new PortfolioItem(itemObj));
-    });
-    PortfolioItem.all.forEach(function(item) {
-      $('.portfolio').append(item.toHtml());
-    });
+    this.all = rawData.map(obj => new PortfolioItem(obj));
+    this.all.map(obj => $('.portfolio').append(obj.toHtml()));
   };
 
-  PortfolioItem.fetchAll = function() {
+  PortfolioItem.fetchAll = () => {
     if(localStorage.rawData){
       PortfolioItem.loadAll(JSON.parse(localStorage.rawData));
     } else {
-      $.getJSON('../scripts/portfolioitems.json').then(function(data){
+      $.getJSON('../scripts/portfolioitems.json').then( data => {
         localStorage.rawData = JSON.stringify(data);
         PortfolioItem.loadAll(data);
       })
