@@ -6,15 +6,9 @@ var app = app || {};
   var portfolioView = {};
 
   portfolioView.handleMainNav = function() {
-    $('.navbar .tab').click(function(){
-      var content = $(this).attr('data-content');
-      $('.content').each(function(){
-        if($(this).hasClass(content)){
-          $(this).show();
-        } else {
-          $(this).hide();
-        }
-      });
+    $('.navbar .tab').click( function() {
+      $('.content').hide();
+      $(`.${$(this).attr('data-content')}`).show();
     });
   }
 
