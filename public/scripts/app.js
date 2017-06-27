@@ -32,6 +32,13 @@ var app = app || {};
     }
   }
 
+  PortfolioItem.itemNames = () => {
+    return PortfolioItem.all.map(item => item.name)
+    .reduce(function(acc,cur) {
+      (acc.includes(cur)) ? console.log('duplicate: ', cur):acc.push(cur);
+    }, []);
+  }
+
   $('div.icon-menu').on('click', function(){
     $('.navbar').toggleClass('hidden');
   })
