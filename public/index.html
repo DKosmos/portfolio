@@ -30,9 +30,9 @@
         <nav>
           <span class="icon-menu"></span>
           <ul class="navbar hidden">
-            <li class="tab" data-content="home">Home</li>
-            <li class="tab" data-content="about">About</li>
-            <li class="tab" data-content="portfolio">Portfolio</li>
+            <li class="tab" data-content="home"><a href="/">Home</a></li>
+            <li class="tab" data-content="about"><a href="/about">About</a></li>
+            <li class="tab" data-content="portfolio"><a href="/portfolio"> Portfolio</a></li>
           </ul>
         </nav>
       </div>
@@ -51,9 +51,13 @@
     </main>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
+    <script src="vendor/scripts/page.js"></script>
     <script src="scripts/portfolioItems.json"></script>
     <script src="scripts/app.js"></script>
-    <script src="scripts/viewcontrol.js"></script>
+    <!-- <script src="scripts/viewcontrol.js"></script> -->
+    <script src="scripts/controllers/portfolioController.js"></script>
+    <script src="scripts/controllers/aboutController.js"></script>
+    <script src="scripts/controllers/routes.js"></script>
     <script>
       app.PortfolioItem.fetchAll();
     </script>
