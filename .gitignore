@@ -124,4 +124,6 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+githubToken.js
+
 # End of https://www.gitignore.io/api/vim,node,macos,windows

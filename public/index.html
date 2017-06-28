@@ -18,6 +18,20 @@
         </section>
     </article>
     </script>
+    <script id="repo-template" type="text/x-handlebars-template">
+      <li>
+        <a href="{{html_url}}" target="_blank">
+          <h3>{{name}}</h3>
+        </a>
+        <p>Description: {{description}}</p>
+        <p>Language: {{language}}</p>
+        <p>Created: {{created_at}}</p>
+        <p>Last updated: {{updated_at}}</p>
+        {{#if watchers_count}}
+          <p>{{watchers_count}} watching this repo</p>
+        {{/if}}
+      </li>
+    </script>
   </head>
   <body>
     <header>
@@ -52,12 +66,15 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
     <script src="vendor/scripts/page.js"></script>
-    <script src="scripts/portfolioItems.json"></script>
-    <script src="scripts/app.js"></script>
+    <script src="scripts/models/githubToken.js"></script>
+    <script src="scripts/models/portfolioItems.json"></script>
+    <script src="scripts/models/repo.js"></script>
+    <script src="scripts/models/app.js"></script>
     <!-- <script src="scripts/viewcontrol.js"></script> -->
     <script src="scripts/controllers/portfolioController.js"></script>
     <script src="scripts/controllers/aboutController.js"></script>
     <script src="scripts/controllers/routes.js"></script>
+    <script src="scripts/views/repoView.js"></script>
     <script>
       app.PortfolioItem.fetchAll();
     </script>
