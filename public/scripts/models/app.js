@@ -25,7 +25,7 @@ var app = app || {};
     if(localStorage.rawData){
       PortfolioItem.loadAll(JSON.parse(localStorage.rawData));
     } else {
-      $.getJSON('../scripts/portfolioitems.json').then( data => {
+      $.getJSON('../scripts/portfolioItems.json').then( data => {
         localStorage.rawData = JSON.stringify(data);
         PortfolioItem.loadAll(data);
       })
