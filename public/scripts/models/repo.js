@@ -6,14 +6,9 @@ var app = app || {};
   repo.all = [];
 
   repo.requestRepos = function(callback) {
-    $.ajax({
-      url: 'https://api.github.com/users/DKosmos/repos',
-      method: 'GET',
-      headers: {Authorization: `token ${process.env.GITHUB_TOKEN}`}})
-    .then(data => {
-      repo.all = data;
-      callback();
-    });
+    $.get('/github/user/repos')
+    .then(data => repo.all = data, err => console.error(err)) // es6 syntax arrow functions
+    .then(callback);
   };
 
   repo.with = attr => repo.all.filter(repo => repo[attr]);
