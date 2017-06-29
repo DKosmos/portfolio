@@ -9,7 +9,7 @@ var app = app || {};
     $.ajax({
       url: 'https://api.github.com/users/DKosmos/repos',
       method: 'GET',
-      headers: {Authorization: token}})
+      headers: {Authorization: `token ${process.env.GITHUB_TOKEN}`}})
     .then(data => {
       repo.all = data;
       callback();
